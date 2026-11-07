@@ -33,4 +33,13 @@ El algoritmo resuelve la ecuación de difusión en 2D mediante el método iterat
 ### 4. Fase 4: Integración (`worker_spmd` y `ejecutar_simulacion`)
 * Orquesta a los $P$ procesos trabajadores a lo largo de $200$ iteraciones temporales, recolecta muestras periódicas del fenómeno y mide el tiempo total de ejecución.
 
----
+**Salida en consola:**
+```text
+Simulacion iniciada en Windows (N=500, pasos=200)...
+
+Procesos (P)    | Tiempo T(P) [s]    | Speedup S(P)    | Eficiencia E(P)
+----------------------------------------------------------------------
+1               | 0.5840             | 1.00            | 100.0         %
+2               | 0.4964             | 1.18            | 58.8          %
+4               | 0.3451             | 1.69            | 42.3          %
+8               | 0.3780             | 1.54            | 19.3          %
